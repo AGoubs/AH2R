@@ -3,29 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="fullscreen-background">
       <div class="header">
-        <div class="logo">
-          <img src="./assets/images/logo.png" alt="AH2R logo" width="100" />
+        <a href="index.html" class="logo">
+          <img src="./assets/images/logo.png" alt="AH2R logo" />
           <span class="title">AH2R</span>
-        </div>
+        </a>
         <div class="flags">
-          <img src="./assets/images/flags/Fr.png" alt="French flag" />
-          <img src="./assets/images/flags/Uk.png" alt="Uk flag" />
+          <button onclick="i18next.changeLanguage('fr')" class="flag-button">
+            <img src="./assets/images/flags/Fr.png" alt="French flag" />
+          </button>
+          <button onclick="i18next.changeLanguage('en')" class="flag-button">
+            <img src="./assets/images/flags/Uk.png" alt="Uk flag" />
+          </button>
         </div>
+      </div>
+      <div class="catch-container">
+        <span id="catch-phrase" class="catch-phrase">L'art du combat, le combat pour l'art</span>
       </div>
       <div class="center-container">
-        <div class="center"></div>
+        <a href="./real.html" id="real-fighting" class="image-button" >
+          <img src="./assets/images/red-button.png" alt="Bouton Image" />
+        </a>
+        <button id="virtual-fighting" class="image-button">
+          <img src="./assets/images/red-button.png" alt="Bouton Image" />
+        </button>
+        <button id="art-combat" class="image-button">
+          <img src="./assets/images/red-button.png" alt="Bouton Image" />
+        </button>
+        <img class="center" src="./assets/images/Accueil.png" alt="" />
       </div>
       <div class="footer">
-        <img src="./assets/images/icons/facebook.svg" alt="facebook logo" />
-        <img src="./assets/images/icons/youtube.svg" alt="youtube logo" />
+        <a href="https://www.facebook.com/ah2r.artsmartiaux" target="_blank">
+          <img src="./assets/images/icons/facebook.svg" alt="facebook logo" />
+        </a>
+        <a href="https://www.youtube.com/AH2R" target="_blank">
+          <img src="./assets/images/icons/youtube.svg" alt="youtube logo" />
+        </a>
       </div>
     </div>
   </body>
+  <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
   <script src="assets/js/script.js"></script>
 </html>
