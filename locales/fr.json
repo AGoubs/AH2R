@@ -1,3 +1,12 @@
 {
-  "catch-phrase": "L'art du combat, le combat pour l'art"
+  "catch-phrase": "L'art du combat, le combat pour l'art",
+  "intro-title": "Un hommage personnel",
+  "intro": "AH2R est un hommage personnel à un être exceptionnel comme on n'en rencontre qu'une seule fois dans sa vie et qui nous a malheureusement quitté en Juin 2006. Mireille Caire nous a tout enseigné et nous a fait comprendre que les plus grands combattants ne sont pas forcément ceux que l'on croise sur les rings ou sur les tatamis mais plutôt sur des lits d'hôpitaux et qui ont choisi de se battre jusqu'au bout contre la maladie et la mort...Tous ceux qui ont eu le grand privilège de côtoyer ce petit bout de femme au sourire d'ange et à la bonté de cœur infinie auront toujours une pensée émue pour elle.",
+  "sub-navbar-intro": "Intro",
+  "sub-navbar-photos": "Photos",
+  "sub-navbar-videos": "Vidéos",
+  "sub-navbar-team_ah2r": "Team AH2R",
+  "sub-navbar-techniques": "Techniques",
+  "sub-navbar-evenements": "évènements",
+  "sub-navbar-dojo": "Dojo"
 }
