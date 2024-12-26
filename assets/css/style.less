@@ -6,14 +6,17 @@
 }
 
 :root {
-  --bs-body-font-family: "Days"; /* Exemple de police */
+  --main-red-color: #dc0c08;
+  --main-dark-color: #333;
+
+  --navbar-scrolled-background-color: #000;
 }
 
 html {
   font-family: "Days", sans-serif;
   font-size: 18px;
   line-height: 1.5;
-  color: #333;
+  color: var(--main-dark-color);
   overflow-x: hidden;
   overflow-y: auto;
   background: url("../images/bg.jpg") no-repeat center center fixed;
@@ -28,151 +31,22 @@ body {
   height: 100%;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 50px;
+.ah2r {
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
-  &.image-header {
-    background: url("../images/ah2r_cover.jpg");
-    background-position: center 1250px;
-
-    .title {
-      color: red !important;
-    }
+  &.index {
+    overflow: hidden;
   }
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-decoration: none;
-  z-index: 10;
 
-  .blason {
-    width: 80px;
-    z-index: 10;
-  }
-
-  .title {
-    margin-top: -40px;
-    width: 250px;
-  }
-}
-
-.flag-button {
-  background: none;
-  border: none;
-}
-
-.flags {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: -40px;
-
-  img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-.catch-container {
-  width: 100%;
-  text-align: center;
-
-  .catch-phrase {
-    color: #dc0c08;
-    font-size: 40px;
-  }
-}
-.red {
-  color: #dc0c08;
-}
-.center-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 150px);
-  gap: 0;
-  font-family: "Fugaz One", sans-serif;
-  text-transform: uppercase;
-  font-size: 60px;
-
-  .right-catchline {
-    margin-left: -200px;
-    margin-top: -370px;
-  }
-
-  .left-catchline {
-    margin-right: -180px;
-    margin-bottom: -230px;
-  }
-
-  .center {
-    width: 100%;
-    max-width: 1300px;
-    min-width: 450px;
-  }
-
-  .image-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-
-    img {
-      display: block;
-      width: 100px;
-      /* Ajustez la taille de l'image */
-      height: auto;
-      transition: all 0.3s ease;
-      /* Transition douce pour l'effet hover */
-    }
-
-    &:hover img {
-      content: url("../images/red-button-hover.png");
-      /* Chemin vers la seconde image */
-    }
-  }
-}
-
-#real-fighting {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#virtual-fighting {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.footer {
-  position: fixed;
-  bottom: 50px;
-  left: 50px;
-
-  a {
-    text-decoration: none;
-  }
-
-  img {
-    width: 30px;
-    height: 30px;
-    margin-right: 20px;
-    cursor: pointer;
-
-    &:hover {
-      filter: brightness(0.8);
-    }
-  }
-}
-
+//--------------------------- Navbar ---------------------------//
 .navbar {
   font-family: "Fugaz One", sans-serif;
   position: fixed !important;
@@ -182,7 +56,25 @@ body {
   padding-bottom: 30px !important;
 
   &.body-scrolled {
-    background-color: #000;
+    background-color: var(--navbar-scrolled-background-color);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    z-index: 10;
+
+    .blason {
+      width: 80px;
+      z-index: 10;
+    }
+
+    .title {
+      margin-top: -40px;
+      width: 250px;
+    }
   }
 
   .et-hero-tabs-container {
@@ -191,14 +83,28 @@ body {
     justify-content: center;
     z-index: 10;
     height: 80px;
-    margin: 0 auto; /* Centre l'élément dans la page */
-    max-width: 1200px; /* Définir une largeur maximale */
-    width: 100%; /* Prend 100% de la largeur disponible jusqu'à la valeur maximale */
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
     margin-top: -40px;
 
     .et-hero-tab {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+      transition: all 0.5s ease;
+      font-size: 0.8rem;
+      height: 100%;
+
+      &:hover {
+        color: #fff;
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+      }
 
       img {
         margin-top: 10px;
@@ -206,18 +112,65 @@ body {
     }
   }
 
+  .flags {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: -40px;
+
+    img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .flags-choice {
+      font-family: Arial;
+      margin-right: 100px;
+    }
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0;
+
+    &.selected {
+      color: #bf0707;
+    }
+  }
+
+  .flags-separator {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+  }
+
+
   &::after {
     left: 145px;
     bottom: 60px;
     content: "";
     position: absolute;
     width: calc(100% - 290px);
-    border-bottom: 3px solid #bf0707;
+    border-bottom: 3px solid var(--main-red-color);
     pointer-events: none;
     z-index: 0;
   }
+
+
+  .vertical-separator {
+    height: 42px;
+    width: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 450px;
+    top: 25px;
+  }
 }
 
+//--------------------------- Sub Navbar ---------------------------//
 .sub-navbar {
   position: fixed;
   width: 100%;
@@ -241,6 +194,7 @@ body {
       text-decoration: none;
     }
   }
+
   &::after {
     left: 145px;
     top: 40px;
@@ -253,89 +207,84 @@ body {
   }
 }
 
-.main-content {
-  margin-top: 200px !important;
-  width: 50%;
-  height: 100%;
-  margin: 0 auto;
-  background-color: #000 !important;
-
-  .main-text {
-    font-family: "Fugaz One", sans-serif;
-    color: #fff;
-    font-size: 18px;
-    margin-top: 20px;
-
-    .title {
-      font-size: 24px;
-      text-transform: uppercase;
-      margin: 10px 0;
-    }
-  }
-}
-
-//Mode mobile
-@media screen and (max-width: 768px) {
-  .center-container {
-    height: calc(100vh - 400px);
-
-    .catchline {
-      display: none;
-    }
-  }
-
-  .image-button {
-    display: none;
-  }
-}
-
-.et-hero-tab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
+//--------------------------- Content ---------------------------//
+.content {
   color: #fff;
-  text-decoration: none;
-  letter-spacing: 0.1rem;
-  transition: all 0.5s ease;
-  font-size: 0.8rem;
-  height: 100%;
-  &:hover {
-    color: white;
-    transform: scale(1.2);
-    transition: all 0.5s ease;
-  }
-}
 
-@media (min-width: 800px) {
-  .et-hero-tabs,
-  .et-slide {
-    h1 {
-      font-size: 3rem;
+  //Index
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 0;
+    font-family: "Fugaz One", sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
+
+    .left-catchline {
+      margin-right: -180px;
+      margin-bottom: -230px;
     }
-    h3 {
-      font-size: 1rem;
+
+    .center {
+      width: 100%;
+      max-width: 1000px;
+      min-width: 450px;
+    }
+
+    .right-catchline {
+      margin-left: -200px;
+      margin-top: -370px;
     }
   }
-  .et-hero-tab {
-    font-size: 1rem;
+
+  //Other pages
+  .main-content {
+    margin-top: 200px !important;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #000 !important;
+
+    .main-text {
+      font-family: "Fugaz One", sans-serif;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 20px;
+
+      .title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+    }
   }
 }
 
-.ah2r {
-  width: 100vw;
-  height: 100vh;
-  background: url("../images/bg.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+//--------------------------- Content ---------------------------//
+.footer {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
 
-  &.index {
-    overflow: hidden;
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
   }
 }
 
+//--------------------------- Utils ---------------------------//
 .mt-8 {
   margin-top: 60px;
 }
@@ -347,50 +296,10 @@ body {
 .mr-5 {
   margin-right: 50px;
 }
-.content {
-  color: #fff;
-  padding-bottom: 100px;
 
-  .hero img {
-    max-height: 600px; /* Hauteur désirée */
-    width: 100%; /* Assure que l'image reste à la largeur du conteneur */
-    object-fit: cover; /* Coupe l'image pour remplir le conteneur */
-  }
-
-  .intro-title {
-    font-size: 24px;
-    font-weight: 600;
-  }
-}
-
-.vertical-separator {
-  height: 42px; /* Hauteur du séparateur */
-  width: 3px; /* Largeur fine pour un séparateur vertical */
-  background-color: #fff; /* Couleur du séparateur (noir ici) */
-  position: absolute;
-  left: 450px;
-  top: 25px;
-}
-
-.flags-choice {
-  font-family: Arial;
-  margin-right: 100px;
-
-  button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 0;
-
-    &.selected {
-      color: #bf0707;
-    }
-  }
-
-  .flags-separator {
-    height: 2px; /* Hauteur du séparateur */
-    width: 25px; /* Largeur fine pour un séparateur vertical */
-    background-color: #fff; /* Couleur du séparateur (noir ici) */
+//--------------------------- Responsive ---------------------------//
+@media screen and (max-width: 768px) {
+  .image-button {
+    display: none;
   }
 }
