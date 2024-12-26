@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <div class="ah2r index">
+  <div class="ah2r real">
     <section class="navbar">
       <a href="index.html" class="logo ml-5">
         <img src="./assets/images/logo.png" alt="AH2R logo" class="blason" />
@@ -35,15 +35,41 @@
           <button class="en" onclick="changeLng('en')">EN</button>
         </div>
       </div>
+      <!-- <a href="javascript:void(0);" class="burger-menu" onclick="showMobileMenu()">
+       <img src="assets/images/icons/burger.svg" alt="burger-menu">
+      </a> -->
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" onchange="showMobileMenu()"/>
+            <span></span>
+            <span></span>
+            <span></span>
+        <ul id="mobile-menu">
+          <li> <a class="et-hero-tab" href="real.html"><img id="reel" src="./assets/images/buttons/reel.png" alt=""></a></li>
+          <li>  <a class="et-hero-tab" href="virtual.html"><img id="virtuel" src="./assets/images/buttons/virtuel.png"
+            alt=""></a></li>
+          <li><a class="et-hero-tab" href="#tab-videos"><img id="art" src="./assets/images/buttons/art.png" alt=""></a></li>
+        </ul>
+       </div>
+      </nav>
     </section>
-
-    <section class="content">
-      <div class="center-container">
-        <div class="catchline left-catchline"><span class="red">L'art</span> du <br> combat</div>
-        <img class="center" src="./assets/images/Accueil_Transparent.png" alt="" />
-        <div class="catchline right-catchline">Le combat <br> pour <span class="red">l'art</span></div>
+    <!-- <section class="sub-navbar">
+      <div class="sub-navbar-container">
+        <a id="sub-navbar-intro" class="sub-navbar-tab" href="#intro">Intro</a>
+        <a id="sub-navbar-photos" class="sub-navbar-tab" href="#photos">Photos</a>
+        <a id="sub-navbar-videos" class="sub-navbar-tab" href="#videos">Vidéos</a>
+        <a id="sub-navbar-team_ah2r" class="sub-navbar-tab" href="#team_ah2r">Team AH2R</a>
+        <a id="sub-navbar-techniques" class="sub-navbar-tab" href="#techniques">Techniques</a>
+        <a id="sub-navbar-evenements" class="sub-navbar-tab" href="#evenements">évènements</a>
+        <a id="sub-navbar-dojo" class="sub-navbar-tab" href="#dojo">Dojo</a>
       </div>
-    </section>
+    </section> -->
+
+   <section class="content">
+    <div class="main-content">
+
+    </div>
+   </section>
     <div class="footer">
       <a href="https://www.facebook.com/ah2r.artsmartiaux" target="_blank">
         <img src="./assets/images/icons/facebook.svg" alt="facebook logo" />
@@ -59,4 +85,6 @@
 <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </html>

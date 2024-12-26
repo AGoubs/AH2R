@@ -106,3 +106,11 @@ document.addEventListener("scroll", () => {
     document.querySelector(".navbar").classList.remove(scrolledClass);
   }
 });
+
+function showMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu) {
+      mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+  }
+  
+}

@@ -54,6 +54,7 @@ body {
   top: 0;
   z-index: 1;
   padding-bottom: 30px !important;
+  display: flex;
 
   &.body-scrolled {
     background-color: var(--navbar-scrolled-background-color);
@@ -61,6 +62,7 @@ body {
 
   .logo {
     display: flex;
+    flex: 1;
     align-items: center;
     gap: 15px;
     text-decoration: none;
@@ -79,20 +81,18 @@ body {
 
   .et-hero-tabs-container {
     display: flex;
+    flex: 2;
     position: relative;
-    justify-content: center;
+    gap: 80px;
     z-index: 10;
     height: 80px;
     margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
     margin-top: -40px;
 
     .et-hero-tab {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex: 1;
       color: #fff;
       text-decoration: none;
       letter-spacing: 0.1rem;
@@ -170,6 +170,90 @@ body {
   }
 }
 
+//--------------------------- Mobile Navbar ---------------------------//
+#menuToggle {
+  display: none;
+  flex-direction: column;
+  margin-top: -30px;
+  margin-right: 70px;
+  -webkit-user-select: none;
+  user-select: none;
+
+  input {
+    display: flex;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 20;
+  }
+
+  span {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    // position: absolute  ;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 11;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #fff;
+  }
+
+  input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+
+  #mobile-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 0 10px #85888C;
+    background-color: #000000;
+    -webkit-font-smoothing: antialiased;
+    // transform-origin: 0% 0%;
+    // transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    z-index: 10;
+
+    li {
+      padding: 10px 0;
+      transition-delay: 2s;
+    }
+  }
+
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+}
+
 //--------------------------- Sub Navbar ---------------------------//
 .sub-navbar {
   position: fixed;
@@ -200,7 +284,7 @@ body {
     top: 40px;
     content: "";
     position: absolute;
-    width: calc(100% - 290px);
+    width: calc(100% - 200px);
     border-bottom: 3px solid #bf0707;
     pointer-events: none;
     z-index: 0;
@@ -297,9 +381,86 @@ body {
   margin-right: 50px;
 }
 
+.red {
+  color: var(--main-red-color);
+}
+
 //--------------------------- Responsive ---------------------------//
+@media screen and (max-width: 576px) {
+  .blason {
+    display: none;
+  }
+
+  .navbar {
+    .logo {
+      margin-left: 5px !important;
+
+      .title {
+        justify-content: start;
+        margin-top: 0 !important;
+
+      }
+    }
+
+    #menuToggle {
+      margin-top: 5px !important;
+    }
+
+    &::after {
+      bottom: 15px;
+      left: 5px;
+      width: calc(100% - 15px);
+    }
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .image-button {
     display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+  .et-hero-tabs-container,
+  .flags {
+    display: none !important;
+  }
+
+  .navbar {
+    .logo {
+      flex: 0;
+
+      .title {
+        display: flex !important;
+      }
+    }
+
+    #menuToggle {
+      display: flex !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) and (min-width: 992px) {
+  .navbar {
+    .logo {
+      flex: 0;
+
+      .title {
+        display: none !important;
+      }
+    }
+
+    .vertical-separator {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .vertical-separator {
+    display: none !important;
   }
 }
