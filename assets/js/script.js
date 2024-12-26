@@ -112,5 +112,11 @@ function showMobileMenu() {
   if (mobileMenu) {
       mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
   }
-  
+}
+
+function closeMobileMenu() {
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu) {
+      mobileMenu.style.display = 'none';
+  }
 }
