@@ -72,7 +72,7 @@ function changeNavbarLng(lng) {
     document.getElementById("reel").src = "./assets/images/buttons/reel.png";
     document.getElementById("virtuel").src =
       "./assets/images/buttons/virtuel.png";
-    document.getElementById("art").src = "./assets/images/buttons/art.png";
+    document.getElementById("art").src = "./assets/images/buttons/culturel.png";
   } else if (lng === "en") {
     document.getElementById("reel").src = "./assets/images/buttons/reel_en.png";
     document.getElementById("virtuel").src =
@@ -95,6 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("scroll", () => {
+  console.log("scroll");
+
   const scrolledClass = "body-scrolled";
   const scrollThreshold = 50; // Ajustez selon vos besoins
 
@@ -108,15 +110,18 @@ document.addEventListener("scroll", () => {
 });
 
 function showMobileMenu() {
-  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenu = document.getElementById("mobile-menu");
   if (mobileMenu) {
-      mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
+    mobileMenu.style.display =
+      mobileMenu.style.display === "none" || mobileMenu.style.display === ""
+        ? "block"
+        : "none";
   }
 }
 
 function closeMobileMenu() {
-  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenu = document.getElementById("mobile-menu");
   if (mobileMenu) {
-      mobileMenu.style.display = 'none';
+    mobileMenu.style.display = "none";
   }
 }

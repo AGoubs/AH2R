@@ -45,7 +45,6 @@ body {
   }
 }
 
-
 //--------------------------- Navbar ---------------------------//
 .navbar {
   font-family: "Fugaz One", sans-serif;
@@ -147,7 +146,6 @@ body {
     background-color: #fff;
   }
 
-
   &::after {
     left: 145px;
     bottom: 60px;
@@ -158,7 +156,6 @@ body {
     pointer-events: none;
     z-index: 0;
   }
-
 
   .vertical-separator {
     height: 42px;
@@ -199,9 +196,8 @@ body {
     border-radius: 3px;
     z-index: 11;
     transform-origin: 5px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-      opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   span:first-child {
@@ -212,21 +208,20 @@ body {
     transform-origin: 0% 100%;
   }
 
-  input:checked~span {
+  input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-3px, -1px);
     background: #fff;
   }
 
-  input:checked~span:nth-last-child(3) {
+  input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  input:checked~span:nth-last-child(2) {
+  input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
-
 
   #mobile-menu {
     display: none;
@@ -235,12 +230,12 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    box-shadow: 0 0 10px #85888C;
+    box-shadow: 0 0 10px #85888c;
     background-color: #000000;
     -webkit-font-smoothing: antialiased;
     // transform-origin: 0% 0%;
     // transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
     z-index: 10;
     color: white;
     list-style: none;
@@ -258,7 +253,7 @@ body {
     }
   }
 
-  #menuToggle input:checked~ul {
+  #menuToggle input:checked ~ ul {
     transform: none;
   }
 }
@@ -330,7 +325,6 @@ body {
       margin-left: -200px;
       margin-top: -370px;
     }
-
   }
 
   .go-down {
@@ -347,11 +341,10 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-   
 
     #who-are-we {
       font-family: "Fugaz One", sans-serif;
-      background: url('../images/index-bg-2.png');
+      background: url("../images/index-bg-2.png");
       background-size: 40% 80%;
       background-position: center;
       background-repeat: no-repeat;
@@ -416,17 +409,177 @@ body {
     background-color: #000 !important;
 
     .main-text {
-      font-family: "Fugaz One", sans-serif;
+      // font-family: "Fugaz One", sans-serif;
       color: #fff;
       font-size: 18px;
       margin-top: 20px;
+    }
+    .title {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+  }
 
-      .title {
-        font-size: 24px;
-        text-transform: uppercase;
-        margin: 10px 0;
+  .team {
+    display: flex;
+    gap: 25px;
+    .team-card {
+      width: 270px;
+      height: 420px;
+      background-color: #fff;
+      color: #000;
+      padding: 30px 20px;
+
+      img {
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .team-card-content {
+        margin-top: 20px;
+        text-align: center;
+
+        .team-card-name {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .team-card-button {
+          margin: 20px auto 0;
+          padding: 4px 23px 6px 22px;
+          background-color: var(--main-red-color);
+          color: #fff;
+          font-weight: bold;
+          border: none;
+        }
       }
     }
+  }
+}
+
+.album .responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+}
+
+.album .responsive-container-block.bg {
+  max-width: 1320px;
+  margin: 0 0 0 0;
+  justify-content: space-between;
+}
+
+.album .img {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.album #i9rb {
+  color: black;
+}
+
+.album #ir6i {
+  color: black;
+}
+
+.album #ikz3b {
+  color: black;
+}
+
+.album .responsive-container-block.img-cont {
+  flex-direction: column;
+  max-width: 33.3%;
+  min-height: auto;
+  margin: 0 0 0 0;
+  height: 100%;
+}
+
+.album #ipix {
+  color: black;
+}
+
+.album #ipzoh {
+  color: black;
+}
+
+.album #ig5q8 {
+  color: black;
+}
+
+.album #imtzl {
+  color: black;
+}
+
+.album #i53es {
+  color: black;
+}
+
+.album .img.img-big {
+  height: 50%;
+  margin: 0 0 16px 0;
+}
+
+@media (max-width: 1024px) {
+  .album .img {
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .album .img {
+    max-width: 32.5%;
+    margin: 0 0 0 0;
+  }
+
+  .album .responsive-container-block.bg {
+    flex-direction: column;
+  }
+
+  .album .responsive-container-block.img-cont {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .album .img.img-big {
+    max-width: 49%;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .album .img {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .album .responsive-container-block.img-cont {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .album .img.img-big {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .album .img.img-last {
+    margin: 0 0 5px 0;
   }
 }
 
@@ -469,6 +622,10 @@ body {
   color: var(--main-red-color);
 }
 
+.bold {
+  font-weight: bold;
+}
+
 //--------------------------- Responsive ---------------------------//
 @media screen and (max-width: 576px) {
   .blason {
@@ -482,7 +639,6 @@ body {
       .title {
         justify-content: start;
         margin-top: 0 !important;
-
       }
     }
 
@@ -504,9 +660,7 @@ body {
     .left-catchline {
       margin: 0;
     }
-
   }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -519,8 +673,7 @@ body {
   }
 }
 
-@media screen and (max-width:1035px) {
-
+@media screen and (max-width: 1035px) {
   .et-hero-tabs-container,
   .sub-navbar,
   .flags {
@@ -545,6 +698,10 @@ body {
     .contact-content {
       flex-direction: column !important;
     }
+  }
+
+  .main-content {
+    width: 80% !important;
   }
 }
 

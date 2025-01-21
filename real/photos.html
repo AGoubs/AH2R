@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+  <title>AH2R</title>
+</head>
+
+<body>
+  <div class="ah2r real">
+    <section class="navbar">
+      <a href="index.html" class="logo ml-5">
+        <img src="../assets/images/logo.png" alt="AH2R logo" class="blason" />
+        <img src="../assets/images/Titre.png" alt="" class="title">
+      </a>
+      <span class="vertical-separator"></span>
+      <div class="et-hero-tabs-container">
+        <a class="et-hero-tab" href="../real.html"><img id="reel" src="../assets/images/buttons/reel.png" alt=""></a>
+        <a class="et-hero-tab" href="virtual.html"><img id="virtuel" src="../assets/images/buttons/virtuel.png"
+            alt=""></a>
+        <a class="et-hero-tab" href="#tab-videos"><img id="art" src="../assets/images/buttons/culturel.png" alt=""></a>
+      </div>
+      <div class="flags mr-5">
+        <img src="../assets/images/earth_red.png" alt="">
+        <div class="flags-choice">
+          <button class="fr selected" onclick="changeLng('fr')">FR</button>
+          <div class="flags-separator"></div>
+          <button class="en" onclick="changeLng('en')">EN</button>
+        </div>
+      </div>
+      <!-- <a href="javascript:void(0);" class="burger-menu" onclick="showMobileMenu()">
+       <img src="assets/images/icons/burger.svg" alt="burger-menu">
+      </a> -->
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" onchange="showMobileMenu()" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="mobile-menu">
+            <li> <a class="et-hero-tab" href="../real.html"><img id="reel" src="../assets/images/buttons/reel.png"
+                  alt=""></a></li>
+            <li> <a class="et-hero-tab" href="virtual.html"><img id="virtuel" src="../assets/images/buttons/virtuel.png"
+                  alt=""></a></li>
+            <li><a class="et-hero-tab" href="#tab-videos"><img id="art" src="../assets/images/buttons/culturel.png"
+                  alt=""></a></li>
+            <hr>
+            <li> <a id="sub-navbar-intro" class="sub-navbar-tab" href="../real.html"
+                onclick="closeMobileMenu()">Intro</a>
+            </li>
+            <li><a id="sub-navbar-photos" class="sub-navbar-tab" href="photos.html"
+                onclick="closeMobileMenu()">Photos</a>
+            </li>
+            <li> <a id="sub-navbar-videos" class="sub-navbar-tab" href="videos.html"
+                onclick="closeMobileMenu()">Vidéos</a>
+            </li>
+            <li><a id="sub-navbar-team_ah2r" class="sub-navbar-tab" href="team.html" onclick="closeMobileMenu()">Team
+                AH2R</a></li>
+            <li><a id="sub-navbar-techniques" class="sub-navbar-tab" href="techniques.html"
+                onclick="closeMobileMenu()">Techniques</a></li>
+            <li> <a id="sub-navbar-evenements" class="sub-navbar-tab" href="evenements.html"
+                onclick="closeMobileMenu()">évènements</a></li>
+            <li><a id="sub-navbar-dojo" class="sub-navbar-tab" href="dojo.html" onclick="closeMobileMenu()">Dojo</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="sub-navbar">
+      <div class="sub-navbar-container">
+        <a id="sub-navbar-intro" class="sub-navbar-tab" href="../real.html">Intro</a>
+        <a id="sub-navbar-photos" class="sub-navbar-tab" href="photos.html">Photos</a>
+        <a id="sub-navbar-videos" class="sub-navbar-tab" href="videos.html">Vidéos</a>
+        <a id="sub-navbar-team_ah2r" class="sub-navbar-tab" href="team.html">Team AH2R</a>
+        <a id="sub-navbar-techniques" class="sub-navbar-tab" href="techniques.html">Techniques</a>
+        <a id="sub-navbar-evenements" class="sub-navbar-tab" href="evenements.html">évènements</a>
+        <a id="sub-navbar-dojo" class="sub-navbar-tab" href="dojo.html">Dojo</a>
+      </div>
+    </section>
+    <section class="content">
+      <div class="main-content">
+        <div id="photos" class="title">Photos</div>
+        <div class="album">
+          <div class="responsive-container-block bg">
+            <div class="responsive-container-block img-cont">
+              <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.4.svg">
+              <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.5.svg">
+              <img class="img img-last"
+                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.6.svg">
+            </div>
+            <div class="responsive-container-block img-cont">
+              <img class="img img-big"
+                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.11.svg">
+              <img class="img img-big img-last"
+                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.10.svg">
+            </div>
+            <div class="responsive-container-block img-cont">
+              <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.7.svg">
+              <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.8.svg">
+              <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/PP5.9.svg">
+            </div>
+          </div>
+        </div>
+
+    </section>
+    <div class="footer">
+      <a href="https://www.facebook.com/ah2r.artsmartiaux" target="_blank">
+        <img src="../assets/images/icons/facebook.svg" alt="facebook logo" />
+      </a>
+      <a href="https://www.youtube.com/AH2R" target="_blank">
+        <img src="../assets/images/icons/youtube.svg" alt="youtube logo" />
+      </a>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</html>

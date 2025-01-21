@@ -1,153 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
-      rel="stylesheet"
-    />
-    <title>AH2R</title>
-  </head>
 
-  <body>
-    <div class="ah2r index">
-      <section class="navbar">
-        <a href="index.html" class="logo ml-5">
-          <img src="./assets/images/logo.png" alt="AH2R logo" class="blason" />
-          <img src="./assets/images/Titre.png" alt="" class="title" />
-        </a>
-        <span class="vertical-separator"></span>
-        <div class="et-hero-tabs-container">
-          <a class="et-hero-tab" href="real.html"
-            ><img id="reel" src="./assets/images/buttons/reel.png" alt=""
-          /></a>
-          <a class="et-hero-tab" href="virtual.html"
-            ><img id="virtuel" src="./assets/images/buttons/virtuel.png" alt=""
-          /></a>
-          <a class="et-hero-tab" href="#tab-videos"
-            ><img id="art" src="./assets/images/buttons/art.png" alt=""
-          /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet" />
+  <title>AH2R</title>
+</head>
+
+<body>
+  <div class="ah2r index">
+    <section class="navbar">
+      <a href="index.html" class="logo ml-5">
+        <img src="./assets/images/logo.png" alt="AH2R logo" class="blason" />
+        <img src="./assets/images/Titre.png" alt="" class="title" />
+      </a>
+      <span class="vertical-separator"></span>
+      <div class="et-hero-tabs-container">
+        <a class="et-hero-tab" href="real.html"><img id="reel" src="./assets/images/buttons/reel.png" alt="" /></a>
+        <a class="et-hero-tab" href="virtual.html"><img id="virtuel" src="./assets/images/buttons/virtuel.png"
+            alt="" /></a>
+        <a class="et-hero-tab" href="#tab-videos"><img id="art" src="./assets/images/buttons/culturel.png" alt="" /></a>
+      </div>
+      <div class="flags mr-5">
+        <img src="./assets/images/earth_red.png" alt="" />
+        <div class="flags-choice">
+          <button class="fr selected" onclick="changeLng('fr')">FR</button>
+          <div class="flags-separator"></div>
+          <button class="en" onclick="changeLng('en')">EN</button>
         </div>
-        <div class="flags mr-5">
-          <img src="./assets/images/earth_red.png" alt="" />
-          <div class="flags-choice">
-            <button class="fr selected" onclick="changeLng('fr')">FR</button>
-            <div class="flags-separator"></div>
-            <button class="en" onclick="changeLng('en')">EN</button>
-          </div>
-        </div>
-        <!-- <a href="javascript:void(0);" class="burger-menu" onclick="showMobileMenu()">
+      </div>
+      <!-- <a href="javascript:void(0);" class="burger-menu" onclick="showMobileMenu()">
        <img src="assets/images/icons/burger.svg" alt="burger-menu">
       </a> -->
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" onchange="showMobileMenu()" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul id="mobile-menu">
-              <li>
-                <a class="et-hero-tab" href="real.html"
-                  ><img id="reel" src="./assets/images/buttons/reel.png" alt=""
-                /></a>
-              </li>
-              <li>
-                <a class="et-hero-tab" href="virtual.html"
-                  ><img
-                    id="virtuel"
-                    src="./assets/images/buttons/virtuel.png"
-                    alt=""
-                /></a>
-              </li>
-              <li>
-                <a class="et-hero-tab" href="#tab-videos"
-                  ><img id="art" src="./assets/images/buttons/art.png" alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </section>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" onchange="showMobileMenu()" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="mobile-menu">
+            <li>
+              <a class="et-hero-tab" href="real.html"><img id="reel" src="./assets/images/buttons/reel.png"
+                  alt="" /></a>
+            </li>
+            <li>
+              <a class="et-hero-tab" href="virtual.html"><img id="virtuel" src="./assets/images/buttons/virtuel.png"
+                  alt="" /></a>
+            </li>
+            <li>
+              <a class="et-hero-tab" href="#tab-videos"><img id="art" src="./assets/images/buttons/culturel.png"
+                  alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
 
-      <section class="content">
-        <div class="center-container">
-          <div class="catchline left-catchline">
-            <span class="red">L'art</span> du <br />
-            combat
-          </div>
-          <img
-            class="center"
-            src="./assets/images/Accueil_Transparent_Sans_Barre.png"
-            alt=""
-          />
-          <div class="catchline right-catchline">
-            Le combat <br />
-            pour <span class="red">l'art</span>
-          </div>
+    <section class="content">
+      <div class="center-container">
+        <div class="catchline left-catchline">
+          <span class="red">L'art</span> du <br />
+          combat
         </div>
-        <img
-          class="go-down"
-          src="./assets/images/chevron-svgrepo-com.svg"
-          width="20"
-        />
-        <div class="black-background">
-          <div id="who-are-we">
-            <span class="title">Qui somme nous</span>
-            <div class="content-separator"></div>
-            <p>
-              Nous sommes la première école d'Arts Martiaux traditionnels et
-              virtuels au monde. Depuis sa création en 2006, notre école a
-              participé à de nombreux championnats nationaux et internationaux
-              de Kung Fu Traditionnel, de Taekwondo, de Karaté Kyokushinkai et
-              de Boxe Thaïlandaise.
-            </p>
-            <p>
-              AH2R compte également dans ses rangs des Champions de France et
-              d'Europe d'Arts Martiaux virtuels notamment pour le jeu Capcom
-              Versus SNK 2 qu'elle gère au niveau mondial depuis la disparition
-              de tous les tournois officiels sur ce jeu en 2008.
-            </p>
-          </div>
-          <div id="contact">
-            <span class="title">Nous contacter</span>
-            <div class="content-separator"></div>
-            <div class="contact-content">
-              <div class="left">
-                <ul>
-                  <li>+336 60 24 56 52</li>
-                  <li>contact@ah2r.org</li>
-                  <li>232 Rue Marcel Mérieux - Lyon 7e</li>
-                  <li>Horaires d’ouverture</li>
-                </ul>
-              </div>
-              <div class="right"><img src="./assets/images/map.png" alt="Carte de l'adresse"></div>
-            </div>
-          </div>
+        <img class="center" src="./assets/images/Accueil_Transparent_Sans_Barre.png" alt="" />
+        <div class="catchline right-catchline">
+          Le combat <br />
+          pour <span class="red">l'art</span>
         </div>
-      </section>
-      <div class="footer">
-        <a href="https://www.facebook.com/ah2r.artsmartiaux" target="_blank">
-          <img src="./assets/images/icons/facebook.svg" alt="facebook logo" />
-        </a>
-        <a href="https://www.youtube.com/AH2R" target="_blank">
-          <img src="./assets/images/icons/youtube.svg" alt="youtube logo" />
-        </a>
       </div>
+      <img class="go-down" src="./assets/images/chevron-svgrepo-com.svg" width="20" />
+      <div class="black-background">
+        <div id="who-are-we">
+          <span class="title">Qui somme nous</span>
+          <div class="content-separator"></div>
+          <p>
+            Nous sommes la première école d'Arts Martiaux traditionnels et
+            virtuels au monde. Depuis sa création en 2006, notre école a
+            participé à de nombreux championnats nationaux et internationaux
+            de Kung Fu Traditionnel, de Taekwondo, de Karaté Kyokushinkai et
+            de Boxe Thaïlandaise.
+          </p>
+          <p>
+            AH2R compte également dans ses rangs des Champions de France et
+            d'Europe d'Arts Martiaux virtuels notamment pour le jeu Capcom
+            Versus SNK 2 qu'elle gère au niveau mondial depuis la disparition
+            de tous les tournois officiels sur ce jeu en 2008.
+          </p>
+        </div>
+        <div id="contact">
+          <span class="title">Nous contacter</span>
+          <div class="content-separator"></div>
+          <div class="contact-content">
+            <div class="left">
+              <ul>
+                <li>+336 60 24 56 52</li>
+                <li>contact@ah2r.org</li>
+                <li>232 Rue Marcel Mérieux - Lyon 7e</li>
+                <li>Horaires d’ouverture</li>
+              </ul>
+            </div>
+            <div class="right"><img src="./assets/images/map.png" alt="Carte de l'adresse"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <a href="https://www.facebook.com/ah2r.artsmartiaux" target="_blank">
+        <img src="./assets/images/icons/facebook.svg" alt="facebook logo" />
+      </a>
+      <a href="https://www.youtube.com/AH2R" target="_blank">
+        <img src="./assets/images/icons/youtube.svg" alt="youtube logo" />
+      </a>
     </div>
-  </body>
-  <script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
-  <script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
-  <script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
-  <script src="assets/js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+</body>
+<script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+<script src="https://unpkg.com/i18next-http-backend/i18nextHttpBackend.min.js"></script>
+<script src="https://unpkg.com/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </html>
